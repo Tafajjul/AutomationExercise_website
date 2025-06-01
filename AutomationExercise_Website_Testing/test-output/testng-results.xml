@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-06-01T15:20:18 IST" name="Default suite" finished-at="2025-06-01T15:20:43 IST" duration-ms="24035">
+    <groups>
+    </groups>
+    <test started-at="2025-06-01T15:20:18 IST" name="Default test" finished-at="2025-06-01T15:20:43 IST" duration-ms="24035">
+      <class name="tests.AutomationExerciseTest">
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:tests.AutomationExerciseTest@43c1b556]" started-at="2025-06-01T15:20:18 IST" name="generateReport" finished-at="2025-06-01T15:20:19 IST" duration-ms="461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.AutomationExerciseTest@43c1b556]" started-at="2025-06-01T15:20:19 IST" name="setUp" finished-at="2025-06-01T15:20:26 IST" duration-ms="6708" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.AutomationExerciseTest.verifyProductSearch() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyProductSearch()[pri:1, instance:tests.AutomationExerciseTest@43c1b556]" started-at="2025-06-01T15:20:26 IST" name="verifyProductSearch" finished-at="2025-06-01T15:20:30 IST" duration-ms="4404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductSearch -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.AutomationExerciseTest@43c1b556]" started-at="2025-06-01T15:20:30 IST" name="tearDown" finished-at="2025-06-01T15:20:30 IST" duration-ms="389" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyProductSearch status=SUCCESS method=AutomationExerciseTest.verifyProductSearch()[pri:1, instance:tests.AutomationExerciseTest@43c1b556] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.AutomationExerciseTest@43c1b556]" started-at="2025-06-01T15:20:30 IST" name="setUp" finished-at="2025-06-01T15:20:35 IST" duration-ms="4119" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.AutomationExerciseTest.verifyAddToCart() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyAddToCart()[pri:2, instance:tests.AutomationExerciseTest@43c1b556]" started-at="2025-06-01T15:20:35 IST" name="verifyAddToCart" finished-at="2025-06-01T15:20:42 IST" duration-ms="7051" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddToCart -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.AutomationExerciseTest@43c1b556]" started-at="2025-06-01T15:20:42 IST" name="tearDown" finished-at="2025-06-01T15:20:42 IST" duration-ms="360" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAddToCart status=SUCCESS method=AutomationExerciseTest.verifyAddToCart()[pri:2, instance:tests.AutomationExerciseTest@43c1b556] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:tests.AutomationExerciseTest@43c1b556]" started-at="2025-06-01T15:20:42 IST" name="flushReport" finished-at="2025-06-01T15:20:43 IST" duration-ms="478" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReport -->
+      </class> <!-- tests.AutomationExerciseTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

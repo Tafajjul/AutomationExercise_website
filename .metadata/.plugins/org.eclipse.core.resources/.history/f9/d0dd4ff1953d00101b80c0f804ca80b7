@@ -1,0 +1,31 @@
+package tests;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import pages.*;
+
+public class AutomationExerciseTest extends BaseTest {
+
+    @Test(priority = 1)
+    public void verifyProductSearch() throws InterruptedException {
+        Homepage home = new Homepage(driver);
+        home.searchProduct("blue top");
+
+        SearchResultsPage searchPage = new SearchResultsPage(driver);
+        Assert.assertTrue(searchPage.isProductDisplayed("blue top"), "Product found in results");
+    }
+
+    @Test(priority = 2)
+    public void verifyAddToCart() throws InterruptedException {
+        Homepage home = new Homepage(driver);
+        home.searchProduct("blue top");
+
+        ProductPage product = new ProductPage(driver);
+        product.addToCart();
+        product.goToCart();
+
+        CartPage cart = new CartPage(driver);
+        Assert.assertEquals(cart.getCartItemName(), "Blue Top", "Product name mismatch in cart");
+        Assert.assertEquals(cart.getCartItemPrice(), "Rs. 500", "Product price mismatch in cart"); // adjust expected price
+    }
+}

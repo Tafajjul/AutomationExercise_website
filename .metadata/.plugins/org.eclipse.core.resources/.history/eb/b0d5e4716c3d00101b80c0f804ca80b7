@@ -1,0 +1,17 @@
+package tests;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import pages.Homepage;
+import pages.SearchResultsPage;
+
+public class SearchProductTest extends BaseTest {
+    @Test
+    public void verifyProductSearch() {
+        Homepage home = new Homepage(driver);
+        home.searchProduct("Tshirt");
+
+        SearchResultsPage searchPage = new SearchResultsPage(driver);
+        Assert.assertTrue(searchPage.isProductDisplayed("Tshirt"), "Product not found in results");
+    }
+}

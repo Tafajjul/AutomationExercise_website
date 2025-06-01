@@ -1,0 +1,36 @@
+package pages;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Homepage extends BasePage {
+	private By productbutton = By.xpath("//a[@href='/products'] ");
+	private By searchBox = By.id("search_product");
+	private By searchButton = By.id("submit_search");
+	private By searchResult = By.xpath("//div[@class='productinfo text-center']//p[contains(text(),'')]");
+
+	public Homepage(WebDriver driver) {
+		super(driver);
+	}
+
+	public void searchProduct(String productName) {
+		driver.findElement(productbutton).click();
+		
+		JavascriptExecutor ja = (JavascriptExecutor) driver;
+		ja.executeScript("arguments[0].scrollIntoView();", searchBox);
+		
+		driver.findElement(searchBox).sendKeys(productName);
+		driver.findElement(searchButton).click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(searchResult));
+		
+		JavascriptExecutor j = (JavascriptExecutor) driver;
+		j.executeScript("arguments[0].scrollIntoView();",searchResult );
+	}
+}

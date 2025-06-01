@@ -1,0 +1,23 @@
+package tests;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import pages.Homepage;
+import pages.ProductPage;
+import pages.CartPage;
+
+public class CartTest extends BaseTest {
+    @Test
+    public void verifyAddToCart() {
+        HomePage home = new HomePage(driver);
+        home.searchProduct("Tshirt");
+
+        ProductPage product = new ProductPage(driver);
+        product.addToCart();
+        product.goToCart();
+
+        CartPage cart = new CartPage(driver);
+        Assert.assertEquals(cart.getCartItemName(), "Tshirt");
+        Assert.assertEquals(cart.getCartItemPrice(), "$20"); // Adjust expected price as per UI
+    }
+}

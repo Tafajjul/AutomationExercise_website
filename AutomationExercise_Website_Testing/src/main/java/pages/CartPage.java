@@ -1,0 +1,27 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class CartPage extends BasePage {
+
+	@FindBy(xpath = "//td[@class='cart_description']/h4/a")
+	WebElement cartItemName;
+
+	@FindBy(xpath = "//td[@class='cart_price']/p")
+	WebElement cartItemPrice;
+
+	public CartPage(WebDriver driver) {
+		super(driver);
+	}
+
+	public String getCartItemName() {
+		return cartItemName.getText();
+	}
+
+	public String getCartItemPrice() {
+		return cartItemPrice.getText();
+	}
+}

@@ -1,0 +1,35 @@
+package pages;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class LoginPage extends BasePage {
+
+	
+	//1. Open homepage → Search for a product → Verify results appear.
+	//2. Add a product to the cart → Go to cart page → Assert product name and price.
+	//• Use assertions to verify that:
+	//o Product search returns expected results.
+	//o Cart reflects correct item and total.
+	
+    @FindBy(id = "email")
+    WebElement emailField;
+
+    @FindBy(id = "password")
+    WebElement passwordField;
+
+    @FindBy(xpath= "//button[@type='submit']")
+    WebElement loginButton;
+
+    public LoginPage(WebDriver driver) {
+        super(driver);
+    }
+
+    public void login(String email, String password) {
+        emailField.sendKeys(email);
+        passwordField.sendKeys(password);
+        loginButton.click();
+    }
+}

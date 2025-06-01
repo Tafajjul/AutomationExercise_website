@@ -1,0 +1,21 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class Homepage extends BasePage {
+	private By productbutton=By.xpath("//a[@href='/products'] ");
+    private By searchBox = By.id("search_product");
+    private By searchButton = By.id("submit_search");
+
+    public Homepage(WebDriver driver) {
+        super(driver);
+    }
+
+    public void searchProduct(String productName) {
+    	 driver.findElement(productbutton).click();
+        driver.findElement(searchBox).sendKeys(productName);
+        driver.findElement(searchButton).click();
+    }
+}

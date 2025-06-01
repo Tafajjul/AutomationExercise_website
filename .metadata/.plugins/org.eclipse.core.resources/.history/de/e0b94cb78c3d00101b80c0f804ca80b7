@@ -1,0 +1,17 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class SearchResultsPage extends BasePage {
+
+    private By productResult = By.xpath("//div[@class='productinfo text-center']/p");
+
+    public SearchResultsPage(WebDriver driver) {
+        super(driver);  // ✅ Enables inheritance from BasePage
+    }
+
+    public boolean isProductDisplayed(String productName) {
+        return driver.findElement(productResult).getText().toLowerCase().contains(productName.toLowerCase());
+    }
+}
